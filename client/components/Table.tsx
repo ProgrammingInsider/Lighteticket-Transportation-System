@@ -115,13 +115,13 @@ const Table = ({
                         }}
                         >
                             <FaRegEdit />
-                            <span className="pt-1">Edit</span>
+                            <span className="pt-1 hidden sm:block">Edit</span>
                         </button>
                     }
                     {
                         deleteBtn && <button className={`btn btnDelete`} disabled={selected.size === 0}>
                             <MdDelete />
-                            <span className="pt-1">Delete</span>
+                            <span className="pt-1 hidden sm:block">Delete</span>
                         </button>
                     }
                 </div>
