@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Spartan:wght@100..900&display=swap');
+@import "tailwindcss";
+
+
+
+
+
+:root {
+  /* Body */
+  --body-bg: #f4f6f8;
+
+  /* Side Menu */
+  --side-menu-bg: #1f2a36;
+  --side-menu-active-text: #ffffff;
+  --side-menu-hover-bg: #2c3a4a;
+  --side-menu-text: #adb5bd;
+  --side-menu-text-hover: #ffffff;
+
+
+  /* Header */
+  --header-bg: #ffffff;
+  --header-text: #1f2a36;
+  --primary: #007bff;
+  --secondary: #6c757d;
+
+  /* Typography */
+  --font-family: "League Spartan", serif, sans-serif;
+  --heading-color: #212529;
+  --paragraph-color: #495057;
+  --label-color: #343a40;
+
+  /* Input */
+  --input-bg: #f8f9fa;
+  --input-border: #ced4da;
+  --input-text: #212529;
+  --input-placeholder: #adb5bd;
+
+  /* Buttons */
+  --btn-primary-bg: #007bff;
+  --btn-primary-text: #ffffff;
+  --btn-primary-hover: #0056b3;
+
+  --btn-secondary-bg: #f8f9fa;
+  --btn-secondary-text: #212529;
+  --btn-secondary-hover: #e9e9e9;
+
+  /* Table */
+  --table-bg: #ffffff;
+  --table-border: #dee2e6;
+  --table-header-bg: #f1f3f5;
+  --table-header-text: #343a40;
+  --table-row-hover: #f8f9fa;
+  --table-text: #212529;
+
+  /* Misc */
+  --link-color: #007bff;
+  --link-hover: #0056b3;
+  --card-bg: #ffffff;
+  --border-radius: 8px;
+  --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+ /* Size */
+  --font-size-base: 16px;
+  --font-size-sm: 14px;
+  --font-size-md: 18px;
+  --font-size-lg: 24px;
+  --font-size-xl: 32px;
+  --font-size-heading: 24px;
+  --font-size-subheading: 20px;
+  --font-size-sidemenu: 18px;
+  --font-size-body: 16px;
+  --font-size-label: 16px;
+  --font-weight-heading: 600;
+  --font-weight-body: 400;
+}
+
+
+/* @theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+} */
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+  background: var(--body-bg);
+  color: var(--paragraph-color);
+  font-family: var(--font-family);
+}
+
+@layer base{
+  tr {
+    border-bottom: 1px solid var(--table-border);
+    padding: 0.5rem 1rem;
+  }
+
+  td,th {
+    padding: 1rem;
+  }
+
+  table{
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    border-color: var(--table-border);;
+  }
+}
+
+@layer utilities {
+  /* === Body === */
+  .body-bg {
+    background-color: var(--body-bg);
+  }
+
+  .primary{
+    color: var(--primary);
+  }
+
+  .secondary{
+    color: var(--secondary);
+  }
+
+  /* === Side Menu === */
+  .side-menu-bg {
+    background-color: var(--side-menu-bg);
+  }
+
+  .side-menu-text {
+    color: var(--side-menu-text);
+    font-size: var(--font-size-sidemenu);
+  }
+  .side-menu-active-text {
+    color: var(--side-menu-active-text);
+    background-color: var(--side-menu-hover-bg);
+    
+  }
+
+  .side-menu-hover-bg:hover {
+    background-color: var(--side-menu-hover-bg);
+  }
+
+  .side-menu-text:hover {
+    color: var(--side-menu-text-hover);
+  }
+
+  /* === Header === */
+  .header-bg {
+    background-color: var(--header-bg);
+  }
+
+  .header-text {
+    color: var(--header-text);
+  }
+
+  /* === Typography === */
+  .font-family {
+    font-family: var(--font-family);
+  }
+
+  .heading-color {
+    color: var(--heading-color);
+  }
+
+  .paragraph-color {
+    color: var(--paragraph-color);
+  }
+
+  .label-color {
+    color: var(--label-color);
+  }
+
+  /* === Input === */
+  .input-bg {
+    background-color: var(--input-bg);
+  }
+
+  .input-border {
+    border-color: var(--input-border);
+  }
+
+  .input-text {
+    color: var(--input-text);
+  }
+
+  .input-placeholder::placeholder {
+    color: var(--input-placeholder);
+  }
+
+  .input-placeholder::placeholder {
+    color: var(--input-placeholder);
+  }
+
+  /* === Buttons === */
+  .btn-primary-bg {
+    background-color: var(--btn-primary-bg);
+  }
+
+  .btn-primary-text {
+    color: var(--btn-primary-text);
+  }
+
+  .btn-primary-hover:hover {
+    background-color: var(--btn-primary-hover);
+  }
+
+  .btn-secondary-bg {
+    background-color: var(--btn-secondary-bg);
+  }
+
+  .btn-secondary-text {
+    color: var(--btn-secondary-text);
+  }
+
+  .btn-secondary-hover:hover {
+    background-color: var(--btn-secondary-hover);
+  }
+
+  .btn-delete-bg:disabled {
+    background-color: #D20000;
+    color: var(--btn-primary-text);
+  }
+
+  /* === Table === */
+  .table-bg {
+    background-color: var(--table-bg);
+  }
+
+  .table-border {
+    border-bottom: var(--table-border);
+  }
+
+  .table-header-bg {
+    background-color: var(--table-header-bg);
+  }
+
+  .table-header-text {
+    color: var(--table-header-text);
+  }
+
+  .table-row-hover:hover {
+    background-color: var(--table-row-hover);
+  }
+
+  .table-text {
+    color: var(--table-text);
+  }
+
+  /* === Misc === */
+  .link-color {
+    color: var(--link-color);
+  }
+
+  .link-hover:hover {
+    color: var(--link-hover);
+  }
+
+  .card-bg {
+    background-color: var(--card-bg);
+  }
+
+  .border-radius {
+    border-radius: var(--border-radius);
+  }
+
+  .box-shadow {
+    box-shadow: var(--box-shadow);
+  }
+
+  /* === Font Sizes === */
+  .font-size-base {
+    font-size: var(--font-size-base);
+  }
+
+  .font-size-sm {
+    font-size: var(--font-size-sm);
+  }
+
+  .font-size-md {
+    font-size: var(--font-size-md);
+  }
+
+  .font-size-lg {
+    font-size: var(--font-size-lg);
+  }
+
+  .font-size-xl {
+    font-size: var(--font-size-xl);
+  }
+
+  .font-size-heading {
+    font-size: var(--font-size-heading);
+  }
+
+  .font-size-subheading {
+    font-size: var(--font-size-subheading);
+  }
+
+  .font-size-body {
+    font-size: var(--font-size-body);
+  }
+
+  .font-size-label {
+    font-size: var(--font-size-label);
+  }
+
+  /* === Font Weights === */
+  .font-weight-heading {
+    font-weight: var(--font-weight-heading);
+  }
+
+  .font-weight-body {
+    font-weight: var(--font-weight-body);
+  }
+}
+
+@layer components {
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    gap: 0.5rem;
+    cursor: pointer;
+  }
+
+  .btnPrimary {
+    background-color: var(--btn-primary-bg);
+    color: var(--btn-primary-text);
+  }
+
+  .btnPrimary:hover {
+    background-color: var(--btn-primary-hover);
+  }
+
+  .btnPrimary:disabled {
+    background-color: #b3cde0; 
+    color: #ffffff80; 
+    cursor: not-allowed;
+    opacity: 0.9;
+  }
+
+  .btnSecondary {
+    background-color: var(--btn-secondary-bg);
+    color: var(--btn-secondary-text);
+  }
+
+  .btnSecondary:hover {
+    background-color: var(--btn-secondary-hover);
+  }
+
+  .btnDelete:disabled {
+    background-color: #f5a3a3; 
+    color: #ffffff80; 
+    cursor: not-allowed;
+    opacity: 0.9;
+  }
+
+  .btnDelete{
+    background-color: #D20000;
+    color: var(--btn-primary-text);
+  }
+  
+  .btnDelete:hover{
+    background-color: #A70000;
+  }
+
+  .custom-checkbox input:checked + span::after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 0;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+
+  .custom-scroll::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-scroll::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+
+  .custom-scroll::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.15); 
+    border-radius: 8px;
+  }
+
+  .custom-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.15) transparent;
+  }
+
+  .error-message{
+    color: #D20000;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+  }
+
+}
