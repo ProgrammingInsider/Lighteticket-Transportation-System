@@ -17,7 +17,7 @@ const TotalDatas = [
 
 const Totals = () => {
   return (
-    <div className="flex flex-col md:flex-row flex-1 gap-4 max-w-5xl justify-center items-center mt-8 mx-auto">
+    <div className="flex flex-col md:flex-row flex-1 gap-4 max-w-5xl justify-center items-center m-8">
       {
         TotalDatas.map((item, index)=>{
           return <SummationsCard key={index} total={item.total} label={item.label}/>
